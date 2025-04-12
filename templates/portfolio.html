@@ -47,21 +47,21 @@
                         developer who loves helping people to build their dream websites.
                     </h5>
                     <div class="flex flex-wrap justify-between gap-y-4 max-w-sm lg:text-7xl text-[3.5rem] my-8 md:my-0 text-[#6e6e6e]">
-                        <i class="devicon-javascript-plain hover:text-[#f0db4f] hover_animation programming_icon" data-color="#f0db4f" ></i>
-                        <i class="devicon-typescript-plain hover:text-[#007acc] hover_animation programming_icon" data-color="#007acc" ></i>
-                        <i class="devicon-go-original-wordmark hover:text-[#00acd7] hover_animation programming_icon" data-color="#00acd7" ></i>
-                        <i class="devicon-nodejs-plain hover:text-[#83cd29] hover_animation programming_icon" data-color="#83cd29" ></i>
-                        <i class="devicon-express-original hover:text-[#444444] hover_animation programming_icon" data-color="#444444" ></i>
-                        <i class="devicon-mongodb-plain hover:text-[#4faa41] hover_animation programming_icon" data-color="#4faa41" ></i>
-                        <i class="devicon-mysql-plain hover:text-[#00618a] hover_animation programming_icon" data-color="#00618a" ></i>
-                        <i class="devicon-postgresql-plain hover:text-[#336791] hover_animation programming_icon" data-color="#336791" ></i>
-                        <i class="devicon-svelte-plain hover:text-[#ff3e00] hover_animation programming_icon" data-color="#ff3e00" ></i>
-                        <i class="devicon-vuejs-plain hover:text-[#41b883] hover_animation programming_icon" data-color="#41b883" ></i>
-                        <i class="devicon-tailwindcss-original-wordmark hover:text-[#38bdf8] hover_animation programming_icon" data-color="#38bdf8" ></i>
-                        <i class="devicon-html5-plain hover:text-[#e54d26] hover_animation programming_icon" data-color="#e54d26" ></i>
-                        <i class="devicon-css3-plain hover:text-[#3d8fc6] hover_animation programming_icon" data-color="#3d8fc6" ></i>
-                        <i class="devicon-npm-original-wordmark hover:text-[#cb3837] hover_animation programming_icon" data-color="#cb3837" ></i>
-                        <i class="devicon-git-plain hover:text-[#f34f29] hover_animation programming_icon" data-color="#f34f29" ></i>
+                        <i class="devicon-javascript-plain hover:text-[#f0db4f] hover_animation programming_icon transition-all duration-[400ms] ease-in-out" data-color="#f0db4f" ></i>
+                        <i class="devicon-typescript-plain hover:text-[#007acc] hover_animation programming_icon transition-all duration-[400ms] ease-in-out" data-color="#007acc" ></i>
+                        <i class="devicon-go-original-wordmark hover:text-[#00acd7] hover_animation programming_icon transition-all duration-[400ms] ease-in-out" data-color="#00acd7" ></i>
+                        <i class="devicon-nodejs-plain hover:text-[#83cd29] hover_animation programming_icon transition-all duration-[400ms] ease-in-out" data-color="#83cd29" ></i>
+                        <i class="devicon-express-original hover:text-[#444444] hover_animation programming_icon transition-all duration-[400ms] ease-in-out" data-color="#444444" ></i>
+                        <i class="devicon-mongodb-plain hover:text-[#4faa41] hover_animation programming_icon transition-all duration-[400ms] ease-in-out" data-color="#4faa41" ></i>
+                        <i class="devicon-mysql-plain hover:text-[#00618a] hover_animation programming_icon transition-all duration-[400ms] ease-in-out" data-color="#00618a" ></i>
+                        <i class="devicon-postgresql-plain hover:text-[#336791] hover_animation programming_icon transition-all duration-[400ms] ease-in-out" data-color="#336791" ></i>
+                        <i class="devicon-svelte-plain hover:text-[#ff3e00] hover_animation programming_icon transition-all duration-[400ms] ease-in-out" data-color="#ff3e00" ></i>
+                        <i class="devicon-vuejs-plain hover:text-[#41b883] hover_animation programming_icon transition-all duration-[400ms] ease-in-out" data-color="#41b883" ></i>
+                        <i class="devicon-tailwindcss-original-wordmark hover:text-[#38bdf8] hover_animation programming_icon transition-all duration-[400ms] ease-in-out" data-color="#38bdf8" ></i>
+                        <i class="devicon-html5-plain hover:text-[#e54d26] hover_animation programming_icon transition-all duration-[400ms] ease-in-out" data-color="#e54d26" ></i>
+                        <i class="devicon-css3-plain hover:text-[#3d8fc6] hover_animation programming_icon transition-all duration-[400ms] ease-in-out" data-color="#3d8fc6" ></i>
+                        <i class="devicon-npm-original-wordmark hover:text-[#cb3837] hover_animation programming_icon transition-all duration-[400ms] ease-in-out" data-color="#cb3837" ></i>
+                        <i class="devicon-git-plain hover:text-[#f34f29] hover_animation programming_icon transition-all duration-[400ms] ease-in-out" data-color="#f34f29" ></i>
                     </div>
                 </section>
               
@@ -102,4 +102,27 @@
     </main>
     
 </body>
+<script>
+    const programmingIcons = document.querySelectorAll('.programming_icon');
+		const aboutSection = document.querySelector('#about-me');
+		const position = { x: 0, y: 0 };
+		function changeProgrammingIcon() {
+			const randomNumber = Math.floor(Math.random() * programmingIcons.length);
+			programmingIcons[randomNumber].style.color = programmingIcons[randomNumber].dataset.color ;
+			setTimeout(() => {
+				programmingIcons[randomNumber].style.color = '';
+			}, 3000);
+		}
+		aboutSection.onmousemove = (e) => {
+			const distance = Math.hypot(e.clientX - position.x, e.clientY - position.y);
+			if (distance > 100) {
+				changeProgrammingIcon();
+				position.x = e.clientX;
+				position.y = e.clientY;
+			}
+		};
+		setInterval(() => {
+			changeProgrammingIcon();
+		}, 5000);
+</script>
 </html>
