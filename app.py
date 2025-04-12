@@ -54,6 +54,23 @@ def regression():
                            r2=r2,
                            corr=corr)
 
+@app.route('/timeseries')
+def timeseries():
+    df_ts = pd.read_csv('data_ts.csv')
+    df_ts['Date'] = pd.to_datetime(df_ts['Date'])
+
+    plt.figure(figsize=(10, 5))
+    plt.plot(df_ts['Date'], df_ts['Sales'], marker='o')
+    plt.title('Sales Over Time')
+    plt.xlabel('Date')
+    plt.ylabel('Sales')
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.savefig('static/timeseries.png')
+    plt.close()
+
+    return render_template('timeseries.html')
+
 
 @app.route('/portfolio')
 def portfolio():

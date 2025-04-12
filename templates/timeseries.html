@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time Series Plot</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-[#1d1d1d] text-[#2F8886] ">
+    <nav class="flex justify-center gap-8 sticky top-0 z-20 border-b border-[#658d98] bg-transparent backdrop-blur-lg py-6 px-10 ">
+        <a href="/portfolio" class="hover:text-[#658d98] font-bold">Portfolio</a>
+        <a href="/" class="hover:text-[#658d98] font-bold">Regression</a>
+        <a href="/timeseries" class="hover:text-[#658d98] font-bold">Time Series</a>
+    </nav>
+    <main class="max-w-screen-xl w-full mx-auto mt-10">
+        <div class="">
+            <h2>Time Series Plot (Sales Over Time)</h2>
+            <img src="{{ url_for('static', filename='timeseries.png') }}" alt="Time Series Plot">
+        </div>
+    </main>
+</body>
+</html>
