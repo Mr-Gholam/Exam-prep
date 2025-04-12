@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Final Exam</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+</head>
+<body class="bg-[#1d1d1d] text-[#2F8886]  ">
+    <nav class="flex justify-center gap-8 sticky top-0 z-20 border-b border-[#658d98] bg-transparent backdrop-blur-lg py-6 px-10 ">
+        <a href="/portfolio" class="hover:text-[#658d98] font-bold">Portfolio</a>
+        <a href="/" class="hover:text-[#658d98] font-bold">Regression</a>
+    </nav>
+    <main class=" max-w-screen-xl w-full mx-auto">
+        <div  class="flex justify-center  justify-items-center  align-center  w-full flex flex-col justify-evenly items-start px-24">
+            <div id="intro" class="h-screen w-full flex flex-col justify-center">
+                <h4 class="text-[#6e6e6e] text-xl font-medium mb-3 md:text-3xl bg-transparent select-none ">
+                    Hi, my name is 
+                </h4>
+                <h2 class="text-3xl font-bold my-3 text-primary cursor-default transition-all md:text-6xl bg-transparent">
+                    Mehdi Gholami
+                </h2>
+                <h3 class="text-xl font-medium my-3 text-[#6e6e6e] md:text-3xl bg-transparent select-none">Full stack web developer</h3>
+                <a href="https://github.com/Mr-Gholam">
+                    <button class="text-lg mt-6 py-2 px-6 md:py-3 md:px-8 rounded-md font-medium text-white bg-[#74aebe] md:text-2xl cursor-pointer"
+                        >Contact Me</button
+                    >
+                </a>
+            </div>
+            <div id="about-me" class="h-screen w-full flex flex-col justify-center">
+                <h1 class="text-2xl font-semibold text-center w-full text-primary my-8 ">About Me</h1>
+                <!-- about me section -->
+                <section class="flex justify-between items-center w-full gap-10 flex-col lg:flex-row md:gap-0">
+                    <h5 class=" text-lg font-medium text-[#6e6e6e] w-1/2">
+                        How do you develop great software that your customers will love? I've had many projects in my career where I've been tasked to create software
+                        with this goal in mind. In every case it has come down to creativity and experience. As a developer I create things that no one else has ever
+                        created before. I use algorithms, patterns and engineering principles to craft and mold products into something that customers will love. At the
+                        same time I'm efficient and work quickly. I have to be creative to put all these pieces together. I'm a life long learner. I am a Full-Stack
+                        developer who loves helping people to build their dream websites.
+                    </h5>
+                    <div class="flex flex-wrap justify-between gap-y-4 max-w-sm lg:text-7xl text-[3.5rem] my-8 md:my-0 text-[#6e6e6e]">
+                        <i class="devicon-javascript-plain hover:text-[#f0db4f] hover_animation programming_icon" data-color="#f0db4f" ></i>
+                        <i class="devicon-typescript-plain hover:text-[#007acc] hover_animation programming_icon" data-color="#007acc" ></i>
+                        <i class="devicon-go-original-wordmark hover:text-[#00acd7] hover_animation programming_icon" data-color="#00acd7" ></i>
+                        <i class="devicon-nodejs-plain hover:text-[#83cd29] hover_animation programming_icon" data-color="#83cd29" ></i>
+                        <i class="devicon-express-original hover:text-[#444444] hover_animation programming_icon" data-color="#444444" ></i>
+                        <i class="devicon-mongodb-plain hover:text-[#4faa41] hover_animation programming_icon" data-color="#4faa41" ></i>
+                        <i class="devicon-mysql-plain hover:text-[#00618a] hover_animation programming_icon" data-color="#00618a" ></i>
+                        <i class="devicon-postgresql-plain hover:text-[#336791] hover_animation programming_icon" data-color="#336791" ></i>
+                        <i class="devicon-svelte-plain hover:text-[#ff3e00] hover_animation programming_icon" data-color="#ff3e00" ></i>
+                        <i class="devicon-vuejs-plain hover:text-[#41b883] hover_animation programming_icon" data-color="#41b883" ></i>
+                        <i class="devicon-tailwindcss-original-wordmark hover:text-[#38bdf8] hover_animation programming_icon" data-color="#38bdf8" ></i>
+                        <i class="devicon-html5-plain hover:text-[#e54d26] hover_animation programming_icon" data-color="#e54d26" ></i>
+                        <i class="devicon-css3-plain hover:text-[#3d8fc6] hover_animation programming_icon" data-color="#3d8fc6" ></i>
+                        <i class="devicon-npm-original-wordmark hover:text-[#cb3837] hover_animation programming_icon" data-color="#cb3837" ></i>
+                        <i class="devicon-git-plain hover:text-[#f34f29] hover_animation programming_icon" data-color="#f34f29" ></i>
+                    </div>
+                </section>
+              
+            </div>
+            <div id="contact-me" class="h-screen w-full flex flex-col justify-center">
+                <h1 class="text-2xl font-semibold text-center w-full text-primary my-8">Contact Me</h1>
+                <!-- contact info -->
+                <div class="flex flex-wrap w-full justify-between items-center">
+                    <!-- social media & contact me description -->
+                    <section class=" md:pr-4 w-full">
+                        <h1 class="w-full text-lg font-medium text-[#6e6e6e]">
+                            I'm always open to freelance opportunities — especially creative, ambitious, or challenging projects that push boundaries.
+                             If you have an idea in mind, need help with something,
+                             or just want to connect and chat about potential collaborations, feel free to reach out! I'm happy to hear from you.
+                        </h1>
+                        <!-- social media -->
+                        <section class="flex justify-end gap-4 items-center justify-items-center mt-8">
+                            <a href="mailto:Mr.gholam99@gmail.com" class="text-lg font-semibold social_media_icon"><i class="fa-solid fa-at"></i>
+                            </a>
+                            <a href="tel:+12369789343" class="text-lg font-semibold social_media_icon"><i class="fa-solid fa-phone"></i>
+                            </a>
+                            <a href="https://github.com/Mr-Gholam" class="social_media_icon"><i class="fa-brands fa-github" ></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/mr-gholam/" class="social_media_icon"><i class="fa-brands fa-linkedin" ></i>
+                            </a>
+                            <a href="https://twitter.com/Mr_Gholam" class="social_media_icon"><i class="fa-brands fa-twitter" ></i>
+                            </a>
+                            <a href="https://codepen.io/mr-gholam" class="social_media_icon"><i class="fa-brands fa-codepen" ></i>
+                            </a>
+                            <a href="https://www.fiverr.com/mr_gholam" class="font-bold p-2 text-secondAscent hover:text-secondary hover_animation"
+                                >Fiverr<span class="text-[#1dbf73]">.</span></a
+                            >
+                        </section>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>

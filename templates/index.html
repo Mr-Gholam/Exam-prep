@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Final Exam</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+</head>
+<body class="bg-[#1d1d1d] text-[#2F8886] ">
+    <nav class="flex justify-center gap-8 sticky top-0 z-20 border-b border-[#658d98] bg-transparent backdrop-blur-lg py-6 px-10 ">
+        <a href="/portfolio" class="hover:text-[#658d98] font-bold">Portfolio</a>
+        <a href="/" class="hover:text-[#658d98] font-bold">Regression</a>
+    </nav>
+    <main class="max-w-screen-xl w-full mx-auto mt-10">
+        <section >
+            <h2>Multiple Linear Regression Result</h2>
+            <p>Coefficient for X1: {{ coef1 }}</p>
+            <p>Coefficient for X2: {{ coef2 }}</p>
+            <p>Intercept: {{ intercept }}</p>
+            <p>Prediction for X1=6, X2=7: {{ prediction }}</p>
+            <p>R² Score: {{ r2 }}</p>
+        
+            <h3>Correlation Matrix (Check Multicollinearity)</h3>
+            {{ corr|safe }}
+        </section>
+        <div class="flex align-center my-5 justify-evenly">
+           
+            <section class="w-96">
+                <h3>Residual Plot (Linearity & Homoscedasticity)</h3>
+                <img src="{{ url_for('static', filename='residuals.png') }}" alt="Residual Plot">
+            </section>
+            <section class="w-96">
+                <h3>Normality Check (QQ Plot)</h3>
+                <img src="{{ url_for('static', filename='normality.png') }}" alt="Normality Plot">
+            </section>
+        </div>
+       
+
+    
+    </main>
+</body>
+</html>
