@@ -1,5 +1,6 @@
-body {
-  background-color: red;
-  font-family: Arial, sans-serif;
+th,
+td {
+  padding: 8px;
   text-align: center;
+  color: #2f8886;
 }

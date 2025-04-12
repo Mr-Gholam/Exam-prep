@@ -47,11 +47,11 @@ def regression():
     r2 = r2_score(y, predictions)
 
     return render_template('index.html',
-                           coef1=model.coef_[0],
-                           coef2=model.coef_[1],
-                           intercept=model.intercept_,
-                           prediction=model.predict([[6, 7]])[0],
-                           r2=r2,
+                           coef1=round(model.coef_[0],1),
+                           coef2=round(model.coef_[1],1),
+                           intercept=round(model.intercept_,2),
+                           prediction=round(model.predict([[6, 7]])[0],2),
+                           r2=round(r2,3),
                            corr=corr)
 
 @app.route('/timeseries')
